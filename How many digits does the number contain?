@@ -1,0 +1,20 @@
+Write a function named numberOfDigits that takes a non-negative number n (n> = 0) as an argument and returns the number of digits of that number. Use a while loop when solving. It is forbidden to use methods and properties of strings and arrays.
+
+Examples:
+
+the numberOfDigits (2) function must return 1;
+the numberOfDigits (63) function should return 2;
+the numberOfDigits (10123) function should return 5.
+
+Solution:
+
+function numberOfDigits(n){
+  let lastNum;
+  let count = 0;
+  while (n > 0){
+    lastNum = n % 10;
+    n = (n - lastNum)/ 10;
+    count++;
+  } 
+  return count;
+}
