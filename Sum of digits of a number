@@ -1,0 +1,21 @@
+Write a function called sumOfDigits that takes a non-negative number n (n> = 0) as an argument and returns the sum of the digits of that number. 
+Use a while loop when solving. It is forbidden to use methods of strings and arrays.
+
+Examples:
+
+sumOfDigits (25) should return 7;
+sumOfDigits (658) should return 19;
+sumOfDigits (13881) should return 21.
+
+Solution:
+
+function sumOfDigits(n) {
+  let lastNum;
+  let sum = 0;
+  while (n > 0){
+    lastNum = n % 10;
+    sum = sum + lastNum;
+    n = (n - lastNum)/ 10;
+  }
+  return sum;
+}
