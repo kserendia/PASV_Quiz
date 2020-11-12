@@ -1,0 +1,20 @@
+You are given a positive integer n. Find the sum of the numbers 1 + 2 + 3 + ... + n
+
+Write a function named sum that takes n as an argument and returns the sum of the numbers 1 through n.
+
+Examples:
+sum (1) must return 1;
+sum (2) must return 3;
+sum (3) should return 6;
+sum (10) should return 55.
+
+
+Solution:
+
+function sum(n){
+  let s = 0;
+  for(let i = 1; i <= n; i++){
+      s = s + i;
+  }
+  return s;
+}
