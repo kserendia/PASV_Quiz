@@ -1,0 +1,28 @@
+The student does not know a single English word at the beginning of the training. 
+On the first day of class, he learned 5 English words. 
+On each subsequent day, he learned 2 more words than on the previous one. How many days will the student know at least n English words?
+
+Write a function called englishWords that takes a non-negative number n (n> = 0) (the number of English words the student wants to learn) as an argument 
+and returns the number of days it takes to learn n words.
+
+Examples:
+
+englishWords (5) must return 1; // 5 words a student can learn in 1 day.
+englishWords (10) should return 2; // a student can learn 10 words in 2 days (5 + 7 = 12)
+function englishWords (20) should return 3. // 20 words a student can learn in 3 days (5 + 7 + 9 = 21)
+function englishWords (30) should return 4. // 30 words a student can learn in 4 days (5 + 7 + 9 + 11 = 32)
+
+
+Solution:
+
+function englishWords(n){
+  let learnedDaily = 5;
+  let learnedSum = 5;
+  let days = 1;
+  while (n > learnedSum){
+    learnedDaily = learnedDaily + 2;
+    days++;
+    learnedSum = learnedSum + learnedDaily;
+  }
+  return days;
+}
