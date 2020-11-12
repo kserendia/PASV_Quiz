@@ -1,0 +1,20 @@
+Find the product of even numbers from 2 to n, i.e. 2 * 4 * 6 * ...
+
+Write a function named multOfEven that takes n as an argument and returns the product of even numbers between 2 and n.
+Examples:
+
+function multOfEven (2) must return 2;
+function multOfEven (6) should return 48;
+multOfEven (10) should return 3840.
+
+Solution:
+
+function multOfEven(n){
+  let p = 1;
+  for(let i = 1; i <= n; i++){
+    if (i % 2 === 0){
+      p = p * i;
+    }
+  }
+  return p;
+}
