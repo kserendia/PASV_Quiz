@@ -1,0 +1,21 @@
+You are given two numbers n and m. Find the sum of all integers between n and m, inclusive.
+
+Write a function called sumFromNToM that takes two numbers n, m and returns the sums of the numbers n through m. In the solution, the loop for.
+
+Examples:
+
+the sumFromNToM (5, 5) function should return 5;
+the sumFromNToM (5, 2) function must return 0;
+sumFromNToM (12, 13) should return 25;
+sumFromNToM (5, 7) should return 18.
+
+
+Solution:
+
+function sumFromNToM(n, m){
+  let sum = 0;                       
+  for (let i = n; i <= m; i++){
+  sum = sum + i;
+  }
+  return sum;
+}
