@@ -1,0 +1,27 @@
+A positive integer is given. Get another integer obtained from the original number by reading it from right to left. 
+Use operations of multiplication, division and finding the remainder from division. 
+The use of string and array methods is prohibited. Use a do while loop in your solution.
+
+Write a function named invertNumber that takes n as an argument and returns the inverted number.
+
+If, as a result of flipping the number, the first digit becomes the digit 0, the number should be displayed without leading zero.
+
+Examples:
+
+invertNumber (123) should return 321.
+invertNumber (15670) should return 7651.
+invertNumber (11) should return 11.
+invertNumber (1000) should return 1.
+
+
+Solution:
+function invertNumber(n){
+  let res = 0;
+  let lastn;
+  do {
+     lastn = n % 10;
+     res = res * 10 + lastn;
+     n = (n - lastn) / 10;
+  } while (n > 0);
+  return res;
+}
