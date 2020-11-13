@@ -1,0 +1,24 @@
+A positive integer is given. Get an array of its digits, written in reverse order (from the last digit to the first).
+
+Write a function called arrayOfDigits that takes the number n as an argument and returns an array of its digits in reverse order. 
+The use of the split, reverse methods is prohibited. Use a do while loop in your solution.
+
+Examples:
+
+arrayOfDigits (123456) should return [6, 5, 4, 3, 2, 1];
+arrayOfDigits (1000) should return [0, 0, 0, 1];
+arrayOfDigits (1) should return [1].
+
+
+Solution:
+
+function arrayOfDigits(n){
+  let arr = [];
+  let lastn;
+  do {
+     lastn = n % 10;
+     arr.push(lastn);
+     n = (n - lastn) / 10;
+  } while (n > 0);
+  return arr;     
+}
