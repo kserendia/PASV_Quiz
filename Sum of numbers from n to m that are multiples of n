@@ -1,0 +1,22 @@
+You are given two numbers n and m. Find the sum of integers from n to m, inclusive, that are multiples of n.
+
+Write a function called sumMultN that takes two numbers n, m and returns the sum of numbers n through m that are multiples of n. Use a for loop in your solution.
+
+Examples:
+
+sumMultN (5, 5) should return 5; // 5 = 5
+sumMultN (5, 2) function must return 0;
+sumMultN (2, 9) function should return 20; // 2 + 4 + 6 + 8 = 20
+sumMultN (5, 19) function should return 30. // 5 + 10 + 15 = 30
+
+
+Solution:
+
+function sumMultN(n, m){
+  let sum = 0;
+  if (n >= m) return 0;
+  for (let i = n; i <= m;  i+=n){
+    sum = sum + i;
+  }
+  return sum;
+}
