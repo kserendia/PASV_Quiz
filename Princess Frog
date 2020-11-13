@@ -1,0 +1,29 @@
+DO While
+The frog princess eats 3 more mosquitoes daily than on the previous day. 
+Determine on which day the number of mosquitoes eaten will exceed 1000 if n mosquitoes were eaten on the first day.
+
+Write a function called frogPrincess that takes n (the number of mosquitoes on the first day) and returns the number of days that a frog will eat 1000 mosquitoes.
+
+Use a do while loop in your solution.
+
+Examples:
+
+frogPrincess (1) should return 26;
+frogPrincess (12) should return 23;
+frogPrincess (99) should return 10.
+frogPrincess (100) should return 9.
+frogPrincess (1000) should return 1.
+
+
+Solution:
+
+function frogPrincess(n){
+let days = 0;
+let sum = 0;
+ do {
+   sum += n;
+   n += 3;
+   days++;
+ } while (sum <= 1000);
+ return days;
+}
