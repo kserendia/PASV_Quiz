@@ -1,0 +1,28 @@
+Having started training, the athlete ran n km on the first day of training. 
+Each subsequent day, he increased the rate by 10% from the rate of the previous day. 
+Determine how many kilometers the athlete will run on the 10th day of training.
+
+Round the result to the nearest integer using Math.round ().
+
+Write a function called running that takes n (kilometers in 1 day) and returns kilometers on the 10th day of class.
+
+Use a do while loop in your solution.
+
+Examples:
+
+running (1) should return 2;
+running (5) should return 12;
+running (10) should return 24.
+
+
+Solution:
+
+function running(n){
+  let days = 1;
+  let run = n;
+  do {
+    run += run * 0.1;
+    days++;
+  } while (days < 10); 
+  return Math.round(run);
+}
