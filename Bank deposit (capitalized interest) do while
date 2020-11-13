@@ -1,0 +1,32 @@
+The depositor put some money in the bank. This amount increases annually by percent (percent> 0) percent of the current deposit amount. 
+Determine how much money will be on the account after a period of years?
+
+Write a function called bankPercent that takes three numbers as arguments:
+
+money (initial deposit amount);
+percent (capitalized bank interest);
+period (number of years),
+and returns the amount of money on the deposit after a period of years. Round the result to two decimal places.
+
+With this type of deposits, the amount increases annually by p percent of the available (current) amount:
+
+Use a do while loop in your solution.
+
+Examples:
+
+bankPercent (1000, 10, 1) should return "1100.00".
+bankPercent (1000, 10, 2) should return "1210.00".
+bankPercent (1000, 10, 3) should return "1331.00".
+bankPercent (1000, 10, 5) should return "1610.51".
+
+Solution:
+
+function bankPercent(money, percent, period){
+  let sum = money;
+  let year = 0;
+  do {
+     sum += sum * percent / 100;
+     year++;
+  } while (year < period);
+  return sum.toFixed (2); 
+}
