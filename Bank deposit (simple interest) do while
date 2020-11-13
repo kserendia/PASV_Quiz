@@ -1,0 +1,26 @@
+The depositor deposited $ 1,000 in the bank. Every year this amount increases by p (p> 0) percent of the initial deposit amount. 
+In how many years will the account be $ 1,500?
+
+Write a function called bankPercent that takes p (bank interest) and calculates how many years from now there will be $ 1,500 in the account.
+
+Use a do while loop in your solution.
+
+Examples:
+
+bankPercent (10) must return 5;
+bankPercent (5) should return 10;
+bankPercent (13) should return 4.
+
+
+Solution:
+
+function bankPercent(p){
+  let years = 0;
+  let sum = 1000;
+  let int = sum * p / 100;
+  do {
+     sum += int;
+     years++;
+  } while (sum < 1500);
+  return years;
+}
