@@ -9,7 +9,7 @@ period (number of years),
 and returns the amount of money on the deposit after a period of years. Round the result to two decimal places.
 
 With this type of deposits, the amount increases annually by p percent of the available (current) amount:
-
+s = s + s * p / 100;
 Use a do while loop in your solution.
 
 Examples:
