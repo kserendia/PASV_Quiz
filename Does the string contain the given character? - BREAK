@@ -1,0 +1,20 @@
+Write a function named iSymbInString that takes str and a symb as arguments and returns true if there is at least one symb in the string and false otherwise.
+
+You must use the break statement in your solution. The use of string methods is prohibited.
+
+Indication. Loop through the line, and if the required character is encountered, assign a value to some variable and interrupt the loop.
+
+Examples:
+
+the iSymbInString ("abcd", "b") function must return true;
+the iSymbInString ("abcd", "f") function must return false.
+
+function iSymbInString(str, symb){
+  for (let i = 0; i < str.length; i++){
+    if (str[i] === symb){
+      return true;
+      break;
+    }
+  }
+  return false;
+}
