@@ -1,0 +1,25 @@
+Write a function named fillArray that takes n (n> = 2) as an argument and returns an array of even numbers from 2 to n, excluding multiples of 3.
+
+You must use the continue statement in your solution.
+
+Examples:
+
+fillArray (10) should return [2, 4, 8, 10]; // even numbers from 2 to 10, except for 6 (6 is a multiple of 3).
+fillArray (20) should return [2, 4, 8, 10, 14, 16, 20]; // even numbers from 2 to 20, excluding numbers 6, 12, 18 (multiples of 3).
+fillArray (7) should return [2, 4]; // even numbers from 2 to 7, excluding 6.
+fillArray (3) should return [2]; // even numbers from 1 to 3, excluding 3.
+fillArray (2) should return [2].
+
+
+Solution:
+
+function fillArray(n){
+  let arr = [];
+   for (let i = 2; i <= n; i+=2) {
+     if (i % 3 === 0) {
+      continue;
+     }
+    arr.push(i);
+   } 
+  return arr;
+} 
