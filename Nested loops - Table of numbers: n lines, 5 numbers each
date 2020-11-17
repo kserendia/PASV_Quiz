@@ -1,0 +1,30 @@
+Write a function called numericalTable that takes n as an argument and returns a table of numbers from 1 to n. 
+Each line contains 5 numbers separated by a space. All lines except the last one end with a \ n newline character.
+
+For example, for n = 4 the line should be obtained:
+
+"1 1 1 1 1 \ n2 2 2 2 2 \ n3 3 3 3 3 \ n4 4 4 4 4"
+
+When printed to the console, such a line is displayed as a table.
+
+Note: When checking the solution in tests, the line feed character is not displayed.
+
+Examples:
+
+numericalTable (1) should return: "1 1 1 1 1";
+numericalTable (3) should return: "1 1 1 1 1 \ n2 2 2 2 2 \ n3 3 3 3 3";
+numericalTable (0) should return: "".
+
+Solution:
+
+function numericalTable(n){
+ let str = '';
+  for (let i = 1; i <= n; i++) {
+    if (i < n) {
+      str += (i + ' ').repeat(4) + i + '\n';
+    } else {
+      str += (i + ' ').repeat(4) + i;
+    }
+  }
+  return str;
+}
