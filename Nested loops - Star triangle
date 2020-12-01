@@ -41,7 +41,7 @@ function starTriangle(n) {
   for(let i = 1; i <=n; i++) {
     str += '*'.repeat(i) + '\n';
   }
-  return str.slice(0, -1));
+  return str.slice(0, -1);
 }
 
 
