@@ -6,6 +6,11 @@ For example, for n = 5, the line should be:
 "1 \ n2 2 \ n3 3 3 \ n4 4 4 4 \ n5 5 5 5 5"
 
 When outputting to the console, such a line is displayed as a "triangle" of numbers:
+1
+2 2
+3 3 3
+4 4 4 4
+5 5 5 5 5
 
 Note: When checking the solution in tests, the line feed character is not displayed.
 
