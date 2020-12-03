@@ -1,0 +1,26 @@
+Write a function called countLinesWithNegativeElements that takes a two-dimensional array arr as an argument and returns the number of 
+lines that contain at least one negative element.
+
+Examples:
+
+the countLinesWithNegativeElements function ([[1, 2], [2, -2, -3], [3, 5], [3, 4, 5, -1, 8]]) should return 2; 
+(since only two strings (two array elements) have negative elements: [2, -2, -3], [3, 4, 5, -1, 8].
+
+the countLinesWithNegativeElements function ([[1, -2], [2, -2, -3], [3, 5], [3, 4, 5, -1, 8], [-3, -1]]) should return 4; 
+(since four elements of the array have negative elements: [1, -2], [2, -2, -3], [3, 4, 5, -1, 8], [-3, -1].
+
+the countLinesWithNegativeElements ([[1, 3], [2, 7, 8], [3, 5]]) function must return 0; (since there are no array elements with negative elements.
+
+Solution:
+
+function countLinesWithNegativeElements(arr){
+let amount = 0
+ for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr[i].length; j++) {
+      if (arr[i][j] < 0) {
+        amount++;
+      break;
+      }
+ }}
+   return (amount)
+}
