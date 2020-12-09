@@ -1,0 +1,15 @@
+Write a function checkingForFinite that takes two numbers a and b as arguments, divides a by b, and checks the division (quotient) by finitude. 
+The function should return true if the result is a finite number, and false otherwise.
+
+Examples:
+
+checkingForFinite (4, 2) must return true;
+checkingForFinite (3, 0) must return false;
+checkingForFinite (-1, 0) must return false.
+
+
+Solution:
+
+function checkingForFinite(a, b){
+  return isFinite(a/b);
+}
