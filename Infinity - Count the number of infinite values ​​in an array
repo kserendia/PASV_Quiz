@@ -1,0 +1,18 @@
+Write a function countInfinity that takes an array arr as an argument and returns the number of non-finite elements in the array.
+
+Examples:
+
+the countInfinity ([Infinity, 1/0, -10/0, 12]) function should return 3, since this array contains three non-finite elements: Infinity, 1/0, -10/0;
+the countInfinity ([1, 100, 10, -10]) function must return 0 (all values in the array are finite);
+countInfinity ([Infinity, NaN]) should return 2 (both Infinity, NaN are non-finite).
+
+Solution:
+function countInfinity(arr){
+  let count = 0;
+  for (let i = 0; i < arr.length; i++){
+    if (Number.isFinite(arr[i]) === false){
+     count++;
+   }
+  }
+  return count;
+}
