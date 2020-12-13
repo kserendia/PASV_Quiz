@@ -1,0 +1,13 @@
+Write a function safeNumber that takes an integer x, returns true if x contains a safe integer value, and false otherwise.
+
+Examples:
+
+safeNumber (20000) must return true;
+safeNumber (9007199254740991) must return true;
+safeNumber (9007199254740992) must return false.
+
+Solution:
+
+function safeNumber(x){
+  return Number.isSafeInteger(x);
+}
