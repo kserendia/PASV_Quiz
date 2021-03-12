@@ -1,0 +1,29 @@
+The values  of the coefficients of the quadratic equation a, b, c are given. Find the roots of the equation, or return the message "There are no roots".
+
+sqEquation
+
+Recall that to find the roots of a quadratic equation, you need to find the discriminant by the formula:
+
+d.
+
+If D <0, the equation has no roots. Otherwise, the roots of the equation can be found by the formulas:
+
+roots
+
+Write a function called quadraticEquation that takes the values ​​of the variables a, b, c as arguments and returns the
+roots of the equation as an array [x1, x2], or the message "There are no roots".
+
+Examples:
+
+quadraticEquation (1, 2, 1) should return [-1, -1];
+quadraticEquation (5, 6, 1) should return [-0.2, -1];
+the quadraticEquation (1, 1, 1) function should return "There are no roots".
+
+Solution:
+function quadraticEquation(a, b, c){
+  let D = Math.pow(b, 2) - (4 * a * c);
+  if (D < 0) return "There are no roots";
+  let x1 = ((-b + Math.sqrt(D)) / (2 * a));
+  let x2 = ((-b - Math.sqrt(D)) / (2 * a));
+  return [x1, x2];
+}
