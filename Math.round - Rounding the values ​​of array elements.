@@ -1,0 +1,15 @@
+Write a function roundElementsOfArray that takes an array arr as an argument and returns an array in which all elements are rounded to the nearest integer.
+
+Examples:
+
+the roundElementsOfArray ([10.23, 34.89, 0.1, 4.45, 8.5]) function should return [10, 35, 0, 4, 9].
+
+
+Solution:
+
+function roundElementsOfArray(arr){
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++){
+    newArr.push(Math.round(arr[i]));
+  }return newArr;
+}
