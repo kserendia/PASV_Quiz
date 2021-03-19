@@ -1,0 +1,14 @@
+Write a function named numToOctal that takes a positive decimal integer num as an argument and returns that octal number.
+
+Examples:
+
+numToOctal (5) should return 5;
+numToOctal (8) should return 10;
+numToOctal (15) should return 17.
+
+
+Solution:
+
+function numToOctal(num){
+  return +num.toString(8);
+}
