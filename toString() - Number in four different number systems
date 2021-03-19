@@ -1,0 +1,15 @@
+Write a function named convertNumber that takes a positive decimal integer num as an argument and returns an array in decimal, binary, octal, and hexadecimal notation.
+
+Examples:
+
+convertNumber (5) should return [5, 101, 5, 5];
+convertNumber (9) should return [9, 1001, 11, 9];
+convertNumber (12) should return [12, 1100, 14, "c"];
+convertNumber (32) should return [32, 100000, 40, "20"].
+
+
+Solution:
+
+function convertNumber(num){
+  return [+num.toString(), +num.toString(2), +num.toString(8), num.toString(16)];
+}
